@@ -1,24 +1,35 @@
 # 🩺 Diabetes Prediction System
 
-A machine learning application that predicts diabetes using a KNN classification model.
+An end-to-end machine learning project that turns diabetes data into an interactive prediction system using **K-Nearest Neighbors (KNN) classification**.
 
-## 🚀 Live App
+### 🚀 Live Demo
 
-[Click here to open the Diabetes Prediction App](https://diabetespredictionapp-c7nyfrevvex9ho3g9z7fyn.streamlit.app/)
+[Try the Diabetes Prediction System](https://diabetespredictionapp-c7nyfrevvex9ho3g9z7fyn.streamlit.app/)
 
-## 📊 Model
+### 🎯 Why KNN?
 
-- Algorithm: K-Nearest Neighbors (KNN)
-- Model Accuracy: 71%
-- Features: Pregnancies, Glucose, Blood Pressure, Skin Thickness, Insulin, BMI, Diabetes Pedigree Function, Age
+KNN was selected because diabetes prediction is a **classification problem**, and patient records can be compared based on the similarity of their health measurements. Since KNN is distance-based, the features were **preprocessed and standardized using StandardScaler** before training.
 
-## 🛠️ Technologies Used
+Rather than focusing only on a prediction, this project demonstrates the complete workflow from **data preparation → model training → evaluation → deployment**.
 
-- Python
-- Streamlit
-- NumPy
-- Pandas
-- Scikit-learn
+### 📊 Result
 
-## Disclaimer
+**KNN Accuracy: 71%**
+
+The deployed application provides a predicted class along with the model's estimated probabilities for both outcomes.
+
+### 🛠️ Stack
+
+`Python` · `Pandas` · `NumPy` · `Scikit-learn` · `Streamlit`
+
+### 📁 Core Files
+
+- `app.py` — Interactive prediction interface
+- `diabetes.csv` — Dataset
+- `knn_model.pkl` — Trained KNN classifier
+- `scaler.pkl` — Fitted feature scaler
+- `requirements.txt` — Dependencies
+
+### ⚠️ Disclaimer
+
 This project is for educational purposes only and is not intended to provide medical diagnosis or professional medical advice.
