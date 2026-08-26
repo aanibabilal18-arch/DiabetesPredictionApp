@@ -128,3 +128,5 @@ if st.button("Predict Diabetes"):
         st.error("⚠️ The patient is likely to have Diabetes.")
     else:
         st.success("✅ The patient is unlikely to have Diabetes.")
+
+    st.caption("⚠️ For educational purposes only. Not a substitute for professional medical advice.")
