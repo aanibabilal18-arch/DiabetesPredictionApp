@@ -10,6 +10,6 @@ The trained model was integrated into an interactive **Streamlit** application a
 
 **Live App:** https://diabetespredictionapp-c7nyfrevvex9ho3g9z7fyn.streamlit.app/
 
-**Project Notebook:** [View the Jupyter Notebook](Diabetesprediction.ipynb)
+**Project Notebook:** [View the Jupyter Notebook](KNNDiabetesClassification.ipynb)
 
 > For educational and demonstration purposes only. This application is not intended for medical diagnosis.
