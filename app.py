@@ -19,6 +19,7 @@ st.set_page_config(
 
 # Title
 st.title("🩺 Diabetes Prediction System")
+st.caption("Developed by Aaniba Bilal")
 st.write("Enter the patient's medical information below.")
 
 # Model accuracy
