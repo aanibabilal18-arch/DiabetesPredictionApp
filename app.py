@@ -23,6 +23,7 @@ st.set_page_config(
 
 st.title("🩺 Diabetes Prediction System")
 st.write("Enter the patient's medical information below.")
+st.info("KNN Model Accuracy: 71%")
 
 st.divider()
 
