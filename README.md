@@ -19,3 +19,6 @@ A machine learning application that predicts diabetes using a KNN classification
 - NumPy
 - Pandas
 - Scikit-learn
+
+## Disclaimer
+This project is for educational purposes only and is not intended to provide medical diagnosis or professional medical advice.
