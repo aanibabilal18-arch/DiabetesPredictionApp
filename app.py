@@ -1,20 +1,13 @@
-
 import streamlit as st
 import numpy as np
 import pickle
 
-# -------------------------------
-# Load Model and Scaler
-# -------------------------------
 with open("knn_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 with open("scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
 
-# -------------------------------
-# Page Configuration
-# -------------------------------
 st.set_page_config(
     page_title="Diabetes Prediction System",
     page_icon="🩺",
@@ -27,9 +20,6 @@ st.info("KNN Model Accuracy: 71%")
 
 st.divider()
 
-# -------------------------------
-# Input Fields
-# -------------------------------
 pregnancies = st.number_input(
     "Pregnancies",
     min_value=0,
@@ -58,7 +48,7 @@ skin_thickness = st.number_input(
     value=20.0
 )
 
-insulin = st.number_input(
+in_ = st.number_input(
     "Insulin",
     min_value=0.0,
     max_value=900.0,
@@ -89,9 +79,6 @@ age = st.number_input(
 
 st.divider()
 
-# -------------------------------
-# Prediction
-# -------------------------------
 if st.button("Predict Diabetes"):
 
     sample = np.array([[
@@ -111,14 +98,15 @@ if st.button("Predict Diabetes"):
 
     if hasattr(model, "predict_proba"):
         probability = model.predict_proba(sample_scaled)[0]
-        confidence = np.max(probability) * 100
 
-    st.subheader("Prediction Result")
+        st.write(f"Estimated probability of No Diabetes: **{probability[0] * 100:.1f}%**")
+        st.write(f"Estimated probability of Diabetes: **{probability[1] * 100:.1f}%**")
 
-    if prediction == 1:
-        st.error("⚠️ The patient is likely to have Diabetes.")
+        st.subheader("Prediction Result")
     else:
-        st.success("✅ The patient is unlikely to have Diabetes.")
-
-    if hasattr(model, "predict_proba"):
-        st.write(f"Confidence: **{confidence:.2f}%**")
+        st.subheader("Prediction Result")
+        if prediction == 1:
+            st.error("⚠️ The patient is likely to have Diabetes.")
+        else:
+            st.success("✅ The patient is unlikely to have Diabetes.")
+        
