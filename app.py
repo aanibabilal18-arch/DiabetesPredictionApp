@@ -48,7 +48,7 @@ skin_thickness = st.number_input(
     value=20.0
 )
 
-in_ = st.number_input(
+insulin = st.number_input(
     "Insulin",
     min_value=0.0,
     max_value=900.0,
