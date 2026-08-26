@@ -1,35 +1,15 @@
-# 🩺 Diabetes Prediction System
+# Diabetes Prediction System
 
-An end-to-end machine learning project that turns diabetes data into an interactive prediction system using **K-Nearest Neighbors (KNN) classification**.
+An end-to-end machine learning project for diabetes classification using the Pima Indians Diabetes Dataset.
 
-### 🚀 Live Demo
+The data was cleaned and preprocessed before training a **K-Nearest Neighbors (KNN)** classifier. KNN was selected to provide a simple, distance-based approach that works well with standardized numerical health features.
 
-[Try the Diabetes Prediction System](https://diabetespredictionapp-c7nyfrevvex9ho3g9z7fyn.streamlit.app/)
+Model performance was evaluated using classification metrics, achieving approximately **71% accuracy**.
 
-### 🎯 Why KNN?
+The trained model was integrated into an interactive **Streamlit** application and deployed for real-time predictions.
 
-KNN was selected because diabetes prediction is a **classification problem**, and patient records can be compared based on the similarity of their health measurements. Since KNN is distance-based, the features were **preprocessed and standardized using StandardScaler** before training.
+**Live App:** https://diabetespredictionapp-c7nyfrevvex9ho3g9z7fyn.streamlit.app/
 
-Rather than focusing only on a prediction, this project demonstrates the complete workflow from **data preparation → model training → evaluation → deployment**.
+**Project Notebook:** [View the Jupyter Notebook](Diabetesprediction.ipynb)
 
-### 📊 Result
-
-**KNN Accuracy: 71%**
-
-The deployed application provides a predicted class along with the model's estimated probabilities for both outcomes.
-
-### 🛠️ Stack
-
-`Python` · `Pandas` · `NumPy` · `Scikit-learn` · `Streamlit`
-
-### 📁 Core Files
-
-- `app.py` — Interactive prediction interface
-- `diabetes.csv` — Dataset
-- `knn_model.pkl` — Trained KNN classifier
-- `scaler.pkl` — Fitted feature scaler
-- `requirements.txt` — Dependencies
-
-### ⚠️ Disclaimer
-
-This project is for educational purposes only and is not intended to provide medical diagnosis or professional medical advice.
+> For educational and demonstration purposes only. This application is not intended for medical diagnosis.
